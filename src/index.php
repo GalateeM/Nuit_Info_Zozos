@@ -13,7 +13,7 @@
     <div style="padding-top: 30px" id="main">
         <div style="text-align: center" class="col-md-12">
                 <h2> Je suis la page index</h2>
-
+                <p> Bienvenuuuue ! </p>
             </div>
         </div>
     </div>
