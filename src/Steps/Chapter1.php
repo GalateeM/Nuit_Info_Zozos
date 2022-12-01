@@ -18,7 +18,7 @@ Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"],
 	echo "<body>";
 	
 	if(branch=="base"){
-			echo dialog[base[step]]
+			echo dialog[base[step]];
 	}
 	else if (branch=="bad"){
 			
