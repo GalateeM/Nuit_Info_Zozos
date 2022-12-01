@@ -9,6 +9,9 @@
     <body>
 		
 		<p><span id="texte"></span></p>
+		
+		<button onclick="myFunction()">Copy Text</button>
+		
     </body>
 	
 	<script>
@@ -22,8 +25,13 @@
 		let branch="base";
 		let step=0;
 		let len=sizeof(dialog["base"]);*/
-		let texte="shoush";
+		let texte="J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...";
 		document.getElementById("texte").innerHTML = texte;
+		
+		function myFunction(step, branch) {
+			document.getElementById("field2").value =   document.getElementById("field1").value;
+		}
+
 	 /*
 	 while(step<$len){
 		if(branch=="base"){
