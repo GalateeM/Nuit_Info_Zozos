@@ -4,7 +4,8 @@
 	<?php
 		$rep;
 		$StartPoint;
-		$dialog=["base"=>[],
+		$dialog=["based"=>["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien!
+Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"],
 		"bad"=>[], 
 		"good"=>[],
 		"med"=>[]
@@ -16,25 +17,24 @@
 	echo "<head><title>Game</title></head>";
 	echo "<body>";
 	
-	while(step<$len){
-		if(branch==""){
-			echo dialog{base[1]}
-		}
-		else if (branch=="bad"){
-			
-		}
-		else if (branch=="good"){
-		
-		}
-		else if (branch=="med"){
-		
-		}
-		else {
-			echo "Ayo wtf ?";
-		}
+	if(branch=="base"){
+			echo dialog[base[step]]
 	}
-	
-	
-	echo "</body>";
+	else if (branch=="bad"){
+			
+	}
+	else if (branch=="good"){
+		
+	}
+	else if (branch=="med"){
+		
+	}
+	else {
+		echo "Ayo wtf ?";
+	}
 	?>
+	
+	<form method=post>
+	</body>
+	
 </html>
