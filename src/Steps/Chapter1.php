@@ -16,25 +16,29 @@ Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"],
 	
 	echo "<head><title>Game</title></head>";
 	echo "<body>";
-	
-	if(branch=="base"){
+	$text="shoush";
+	echo $text;
+	while(step<$len){
+		if(branch=="base"){
 			echo dialog[base[step]];
-	}
-	else if (branch=="bad"){
+		}
+		else if (branch=="bad"){
 			
-	}
-	else if (branch=="good"){
+		}
+		else if (branch=="good"){
+		
+		}
+		else if (branch=="med"){
+		
+		}
+		else {
+			echo "Ayo wtf ?";
+		}
 		
 	}
-	else if (branch=="med"){
-		
-	}
-	else {
-		echo "Ayo wtf ?";
-	}
+	
+	echo '<input type="button" value="Click Me" />';
+	
+	echo "</body>";
 	?>
-	
-	<form method=post>
-	</body>
-	
 </html>
