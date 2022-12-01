@@ -14,6 +14,9 @@
         <div style="text-align: center" class="col-md-12">
                 <h2> Je suis la page index</h2>
                 <p> Bienvenuuuue ! </p>
+				
+				 <button type="submit" formaction="Steps/Chapter1.php">Start</button>
+				
             </div>
         </div>
     </div>
