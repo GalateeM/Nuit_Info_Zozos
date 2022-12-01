@@ -12,7 +12,7 @@ Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"],
 		];
 		$branch="base";
 		$step=0;
-		$len=sizeof(dialog["base"])
+		$len=sizeof(dialog["base"]);
 	
 	echo "<head><title>Game</title></head>";
 	echo "<body>";
