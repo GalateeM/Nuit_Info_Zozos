@@ -1,1 +1,2 @@
-# Nuit_Info_Zozos
+# Nuit de l'Info
+## Équipe : Les Zozos
