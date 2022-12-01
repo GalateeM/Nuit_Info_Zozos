@@ -20,6 +20,18 @@
 		if(branch==""){
 			echo dialog{base[1]}
 		}
+		else if (branch=="bad"){
+			
+		}
+		else if (branch=="good"){
+		
+		}
+		else if (branch=="med"){
+		
+		}
+		else {
+			echo "Ayo wtf ?";
+		}
 	}
 	
 	
