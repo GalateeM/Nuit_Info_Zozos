@@ -16,11 +16,11 @@
 	echo "<head><title>Game</title></head>";
 	echo "<body>";
 	
-	while(step<$len)
+	while(step<$len){
 		if(branch==""){
 			echo dialog{base[1]}
 		}
-	
+	}
 	
 	
 	echo "</body>";
