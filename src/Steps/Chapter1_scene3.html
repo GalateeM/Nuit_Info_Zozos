@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <title>Game</title>
+    </head>
+
+    <body class="chapter1">
+		<footer class="bottom">
+			<div class="dialogue"><span id="texte"></span></div>
+			<button type="submit" id="choixL" onclick="boutL()" id="choixL"></button>
+			<button type="submit" id="choixR" onclick="boutR()" id="choixR"></button>
+		</footer>
+
+		
+
+		
+    </body>
+	
+	<script>
+		let rep;
+		let based=["<b>Ellipse de 3 mois environ <b>", "Nous sommes en hiver, la température avoisinne les zéro degrés. J'ai dû attraper froid, je me sens faible et je n'arrête pas de me moucher.",
+        "Alors que je m'apprête à partir de chez moi, mon téléphone sonne. Je n'ai pas envi de répondre, mais je prends tout de même l'appel.",
+    "Moi : Allo ?", "Alix : Salut, je ne sais pas si tu te souviens de moi. On s'est rencontré en boîte il y a à peu près trois mois. ", "Je me frotte le visage et me souviens de l'étrange message reçu peu après cette soirée. La voix de mon interlocutrice ne me dit cependant rien.",
+"Moi : Oui, tout à fait, dis-je. Comment vas-tu ?", "Alix : Assez mal, à vrai dire. C'est pour ça que je t'appelle : je viens de me faire dépister pour le VIH car je suis dans une relation sérieuse, et il se trouve que ... je suis positive. ", "<i>Mon coeur vient de manquer un battement.</i>",
+"Moi : Tu es sûre ?", "Alix : Oui, et tu devrais te faire dépister dès aujourd'hui afin d'avoir une chance de te soigner et ne pas le transmettre à d'autres personnes.",
+"Moi : Merci de m'avoir prévenu, d'une voix mécanique. Je raccroche et reste le regard dans le vide quelques instants.", "Je vais me faire dépister ?"];
+		let bad = [""]; 
+		let good_etape1 = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\"", "Répondre ?", "Moi : Désolé, je ne me rappelle pas ni de qui tu es, ni de la soirée d'hier.", "?? : Ah... Je vois...", "Moi : Tu es qui du coup stp? Tu pourrais me rafraîchir la mémoire sur ce qu'il s'est passé?", "Alix : C'est Alix, c'est moi qui ai organisé la soirée. Après quelques verres on s'est échapé dans ma chambre et je te laisse imaginer la suite...", "Moi : Merci beaucoup, oui j'imagine bien la suite ahah", "Je vais poser une question..."];
+		let good_etape2 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal"]
+		let good_etape3 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal"]
+		let med = ["Moi : ça te dit qu'on se revoit à l'ocas' ?", "Alix : J'aurais bien aimé mais je suis rentrée chez mes parents en Belgique", "Moi : Ah ok, pas de problème. J'espère qu'on pourra se revoir"];
+		
+		let choix=false;
+		let step = 0;
+
+		/*
+		let len=sizeof(dialog["base"]);
+		*/
+		document.getElementById("texte").innerHTML = based[step];
+		document.getElementById("choixL").style.visibility = 'hidden';
+		document.getElementById("choixR").innerHTML = "Continuer";
+		choix=false;
+		branche="base";
+
+
+		function boutR() {
+            step=step+1;
+            if(step<12) {
+                document.getElementById("texte").innerHTML = based[step];
+				document.getElementById("choixL").style.visibility = 'hidden';
+				document.getElementById("choixR").innerHTML = "Continuer";
+            }
+			if(branche=="base" && step>=12) {
+				if(choix==false){
+					document.getElementById("texte").innerHTML = based[step];
+					document.getElementById("choixL").style.visibility = 'visible';
+					document.getElementById("choixL").innerHTML = "Non";
+					document.getElementById("choixR").innerHTML = "Oui";
+					choix=true;
+				}
+				else{
+					document.location.href="./Chapter2.html";
+				}
+			}
+        }
+		
+		
+		function boutL() {
+            step=step+1;
+            document.location.href="./Chapitre3.html?choixP=bad1";
+			
+        }
+
+	</script>
+</html>
