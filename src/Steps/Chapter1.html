@@ -61,7 +61,7 @@
 				}
 			}else if (branche=="good1"){
 				if(choix==false) {
-					if(step<7 && step !=1){
+					if(step<6 && step !=1){
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").style.visibility = 'hidden';
 						document.getElementById("choixR").innerHTML = "Continuer";
@@ -72,7 +72,13 @@
 						document.getElementById("choixL").innerHTML = "Ne pas répondre";
 						document.getElementById("choixR").innerHTML = "répondre";
 						choix=true;
-						
+					
+					}else if(step==6){
+						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").style.visibility = 'visible';
+						document.getElementById("choixL").innerHTML = "Ca te dit qu'on se revoit ?";
+						document.getElementById("choixR").innerHTML = "On s'est protégés ?";
+						choix=true;
 					}else {
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").style.visibility = 'hidden';
@@ -91,6 +97,8 @@
 						choix=false;
 						step=0;
 						document.getElementById("texte").innerHTML = good_etape2[step];
+						document.getElementById("choixL").style.visibility = 'hidden';
+						document.getElementById("choixR").innerHTML = "Continuer";
 					}
 				}
 			}
@@ -149,7 +157,13 @@
 						document.getElementById("choixL").innerHTML = "Ne pas répondre";
 						document.getElementById("choixR").innerHTML = "répondre";
 						choix=True;
-						
+					}else if(step==7){
+						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").style.visibility = 'visible';
+						document.getElementById("choixL").innerHTML = "Ca te dit qu'on se revoit ?";
+						document.getElementById("choixR").innerHTML = "On s'est protégés ?";
+						choix=true;
+					
 					}else {
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").style.visibility = 'hidden';
@@ -163,6 +177,7 @@
 						choix=false;
 						step=0;
 					}
+					
 					else {
 						branche = "med";
 						choix=false;
