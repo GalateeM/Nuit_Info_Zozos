@@ -2,7 +2,6 @@
 
 ## Chapitres 1:
 ### Scène 1 :
-#### Dialogue 1 :
 J'ai fait une grosse soirée hier...   C'est le blackout total, je ne me rappel plus de rien!   
 Qu'est ce que j'ai mal à la tête...
  
@@ -56,6 +55,21 @@ Cs : "Pas de problème, c'est normal"
 -> Direction ligne Center
 
 - Oui
+
+### Scène 2 :
+
+Je me suis rendu en pharmacie afin de me procurer un autotest VIH et me suis fait celui-ci aussitôt.
+Le résultat est négatif.  
+Sur les conseilles du standardiste au numéro d'urgence SIDA Info service '0 800 840 800', je me rends chez mon médecin.  
+Celui-ci me parle du TPE (Traitement PostExposition) qui est un traitement à prendre le plus tôt possible après un rapport non-protégé.  
+Cependant après évaluation des risques le médecin à décider de me laisser sous simple surveillance médical.
+
+*Six semaines plus tard*
+
+J'ai réalisé le test ELISA préscrit par mon médecin et les résultat son positif.  
+Malgré mon choc, mon médecin me rassure en m'expliquant que grâce à un traitement antirétroviral je pourrais vivre sans que le virus m'handicape.
+
+
 
 
 

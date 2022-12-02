@@ -76,12 +76,12 @@ body.chapter1 {
 }
 
 div.dialogue {
-  width: 100vw;
-  height: 100px;
+  width: 90vw;
+  height: 10vw;
   background: rgba(176, 115, 115, 0.686);
   border-radius: 0.5rem;
-  margin : 2rem;
-  
+  margin : 2vw 5vw;
+  padding : 0.5rem 0.7rem;
 }
 
 footer.bottom {
