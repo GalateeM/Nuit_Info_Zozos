@@ -9,8 +9,8 @@
     <body class="chapter1">
 		<footer class="bottom">
 			<div class="dialogue"><span id="texte"></span></div>
-			<button onclick="myFunction()">Copy Text</button>
-			<button onclick="myFunction()">Copy Text</button>
+			<button onclick="myFunction()"><span id="repL"></span></button>
+			<button onclick="myFunction()"><span id="repR"></span></button>
 		</footer>
 
 		
@@ -32,7 +32,8 @@
 		
 		let texte=based[1];
 		document.getElementById("texte").innerHTML = texte;
-		
+		document.getElementById("repL").innerHTML = "Continuer";
+		document.getElementById("repR").innerHTML = "";
 		
 		
 		
@@ -68,6 +69,5 @@
 		
 	}
 	
-	 '<input type="button" value="Click Me" />';*/
 	</script>
 </html>
