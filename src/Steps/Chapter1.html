@@ -8,9 +8,9 @@
 
     <body class="chapter1">
 		<footer class="bottom">
-			<div class="dialogue"><span id="texte"></span></div>
-			<button onclick="myFunction()">droite</span></button>
-			<button onclick="myFunction()">gauche</span></button>
+			<div class="dialogue"><span id="choixL"></span></div>
+			<button onclick="myFunction(0, good)"><span id="ChoixL"></span></span></button>
+			<button onclick="myFunction(0, good)"><span id="ChoixR"></span></span></button>
 		</footer>
 
 		
@@ -33,8 +33,17 @@
 		let len=sizeof(dialog["base"]);
 	*/
 		let texte="F";
-		document.getElementById("texte").innerHTML = texte;
+		//let ChoixA="Continue";
+		//let ChoixB="";
 
+		
+		document.getElementById("texte").innerHTML = texte;
+		//document.getElementById("choixL").innerHTML = ChoixA;
+		//document.getElementById("choixR").innerHTML = ChoixB;
+		
+		function myFunction(step, branch) {
+            document.getElementById("texte").value =   document.getElementById("field1").value;
+        }
 
 	 /*
 	 while(step<$len){
@@ -54,6 +63,7 @@
 			 "Ayo wtf ?";
 		}
 		
+	
 	}*/
-		</script>
+	</script>
 </html>
