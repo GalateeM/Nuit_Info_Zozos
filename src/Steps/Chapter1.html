@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <title>Game</title>
+    </head>
+
+    <body class="chapter1">
+		<footer class="bottom">
+			<div class="dialogue"><span id="texte"></span></div>
+			<button onclick="myFunction()"><span id="repL"></span></button>
+			<button onclick="myFunction()"><span id="repR"></span></button>
+		</footer>
+
+		
+
+		
+    </body>
+	
+	<script>
+		let rep;
+		let based=["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"];
+		let bad = []; 
+		let good = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\""];
+		let med = [];
+		
+		
+		let branch="base";
+		let step=0;
+		let len=sizeof(dialog["base"]);
+		
+		let texte=based[1];
+		document.getElementById("texte").innerHTML = texte;
+		document.getElementById("repL").innerHTML = "Continuer";
+		document.getElementById("repR").innerHTML = "";
+		
+		
+		
+		
+		
+		function myFunction(step, branch) {
+			if(branch=="base"){
+				if(step==1){
+					
+				}
+			}
+		
+			document.getElementById("texte").value =   document.getElementById("field1").value;
+		}
+
+	 /*
+	 while(step<$len){
+		if(branch=="base"){
+			dialog[base[step]];
+		}
+		else if (branch=="bad"){
+		
+		}
+		else if (branch=="good"){
+		
+		}
+		else if (branch=="med"){
+		
+		}
+		else {
+			 "Ayo wtf ?";
+		}
+		
+	}
+	
+	</script>
+</html>

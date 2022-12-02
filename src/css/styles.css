@@ -64,6 +64,32 @@
   --bs-body-bg: #fff;
 }
 
+body.chapter1 {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: url("../assets/img/porte_e.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  
+}
+
+div.dialogue {
+  width: 100vw;
+  height: 100px;
+  background: rgba(176, 115, 115, 0.686);
+  border-radius: 0.5rem;
+  margin : 2rem;
+  
+}
+
+footer.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 *,
 *::before,
 *::after {
