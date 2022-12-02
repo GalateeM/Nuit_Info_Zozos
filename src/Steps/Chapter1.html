@@ -69,7 +69,7 @@
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = "Ne pas répondre";
 						document.getElementById("choixR").innerHTML = "répondre";
-						choix=True;
+						choix=true;
 						
 					}else {
 						document.getElementById("texte").innerHTML = good_etape1[step];
@@ -115,13 +115,12 @@
 				else{
 					branche = "bad";choix=false;
 					step=0;
-					document.getElementById("texte").innerHTML = bad[step];
-					document.getElementById("choixL").innerHTML = ". ";
-					document.getElementById("choixR").innerHTML = "Continuer";
+					document.location.href="./Chapitre3.html?choixP=bad"; 
 				}
 			}else if (branche=="good1"){
 				if(choix==false) {
 					if(step<7 && step !=1){
+						
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = ". ";
 						document.getElementById("choixR").innerHTML = "Continuer";
@@ -140,6 +139,7 @@
 					}
 				}else {
 					if(step==2){
+						document.location.href="./Chapitre3.html?choixP=bad"; 
 						branche=="bad"
 						choix=false;
 						step=0;
