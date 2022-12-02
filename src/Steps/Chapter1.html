@@ -38,12 +38,12 @@
 		document.getElementById("choixL").innerHTML = ". ";
 		document.getElementById("choixR").innerHTML = "Continuer";
 		choix=false;
-		branchee="base";
+		branche="base";
 
 
 		function boutR() {
             step=step+1;
-			if(branchee=="base") {
+			if(branche=="base") {
 				if(choix==false){
 					document.getElementById("texte").innerHTML = based[step];
 					document.getElementById("choixL").innerHTML = "Ne pas répondre";
@@ -94,7 +94,7 @@
 		
 		function boutL() {
             step=step+1;
-			if(branchee=="base") {
+			if(branche=="base") {
 				if(choix==false){
 					document.getElementById("texte").innerHTML = based[step];
 					document.getElementById("choixL").innerHTML = "Ne pas répondre";
@@ -102,11 +102,11 @@
 					choix=true;
 				}
 				else{
-					branchee = "bad";
+					branche = "bad";
 				}
-			}else if (branchee=="bad"){
+			}else if (branche=="bad"){
 				
-			}else if (branchee=="good1"){
+			}else if (branche=="good1"){
 				if(choix==false) {
 					if(step<good_etape1.rows.length-1){
 						document.getElementById("texte").innerHTML = based[step];
@@ -120,7 +120,7 @@
 						choix=true;
 					}
 				}else {
-					branchee = "good2";
+					branche = "good2";
 					choix=false;
 					step=0;				
 				}
@@ -128,7 +128,7 @@
 			else if (branche=="good2"){
 				
 			}
-			else if (branchee=="good3"){
+			else if (branche=="good3"){
 				
 			}
 			else if (branche=="med"){
