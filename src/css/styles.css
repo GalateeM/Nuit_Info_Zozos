@@ -76,9 +76,12 @@ body.chapter1 {
 }
 
 div.dialogue {
-  width: 100%;
+  width: 100vw;
   height: 100px;
   background: rgba(176, 115, 115, 0.686);
+  border-radius: 0.5rem;
+  margin : 2rem;
+  
 }
 
 footer.bottom {
