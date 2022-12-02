@@ -31,8 +31,8 @@
                     "Alix : \"Je suis tellement désolé.e, je n'avais aucune idée que j'étais porteur.euse. Je ne l'ai appris qu'hier\"",
                     "Moi : \"Je me doute que tu ne l'aurais pas fait exprès, j'espère que ça ira pour toi et encore merci de m'avoir prévenu\"",
                     "Alix : \"Derien, c'est normal. Au revoir\"",
-                    "Moi : \"Au revoir"
-                    ]
+                    "Moi : \"Au revoir\""
+                    ]       
 		let texte="F";
 		let Choix=false;
 		step = 0;
@@ -48,7 +48,11 @@
 
 		function boutR() {
             step=step+1;
-			if(branche=="base") {
+            if(step==18) {
+                document.location.href="./Chapter2.html";
+            }
+
+			if(branche=="base" && step < 18) {
 				if(choix==false){
 					document.getElementById("texte").innerHTML = based[step];
 					document.getElementById("choixL").innerHTML = "Ne pas répondre";
@@ -60,95 +64,10 @@
 					choix=false;
 					step=0;
 					document.getElementById("texte").innerHTML = good_etape1[step];
-					document.getElementById("choixL").innerHTML = ". ";
 					document.getElementById("choixR").innerHTML = "Continuer";
 				}
-			}else if (branche=="good1"){
-				if(choix==false) {
-					if(step<5){
-						document.getElementById("texte").innerHTML = good_etape1[step];
-						document.getElementById("choixL").innerHTML = ". ";
-						document.getElementById("choixR").innerHTML = "Continuer";
-					}
-					else {
-						document.getElementById("texte").innerHTML = good_etape1[step];
-						document.getElementById("choixL").innerHTML = ". ";
-						document.getElementById("choixR").innerHTML = "Continuer";
-						choix=true;
-					}
-				}else {
-					branche = "good2";
-					choix=false;
-					step=0;				
-				}
-			}
-			else if (branche=="good2"){
-				
-			}
-			else if (branche=="good3"){
-				
-			}
-			else if (branche=="bad"){
-			
-			}
-			else if (branche=="med"){
-			
-			}
-			else {
-				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
-			}
         }
-		
-		
-		function boutL() {
-            step=step+1;
-			if(branche=="base") {
-				if(choix==false){
-					document.getElementById("texte").innerHTML = based[step];
-					document.getElementById("choixL").innerHTML = "Ne pas répondre";
-					document.getElementById("choixR").innerHTML = "répondre";
-					choix=true;
-				}
-				else{
-					branche = "bad";choix=false;
-					step=0;
-					document.getElementById("texte").innerHTML = bad[step];
-					document.getElementById("choixL").innerHTML = ". ";
-					document.getElementById("choixR").innerHTML = "Continuer";
-				}
-			}else if (branche=="good1"){
-				if(choix==false) {
-					if(step<5){
-						document.getElementById("texte").innerHTML = good_etape1[step];
-						document.getElementById("choixL").innerHTML = ". ";
-						document.getElementById("choixR").innerHTML = "Continuer";
-					}
-					else {
-						document.getElementById("texte").innerHTML = good_etape1[step];
-						document.getElementById("choixL").innerHTML = ". ";
-						document.getElementById("choixR").innerHTML = "Continuer";
-						choix=true;
-					}
-				}else {
-					branche = "good2";
-					choix=false;
-					step=0;				
-				}
-			}
-			else if (branche=="good2"){
-				
-			}
-			else if (branche=="good3"){
-				
-			}
-			else if (branche=="med"){
-			
-			}
-			else {
-				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
-			}
-			
-        }
+    }
 
 	</script>
 </html>
