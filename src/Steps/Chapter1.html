@@ -51,16 +51,19 @@
 					branche = "good1";
 					choix=false;
 					step=0;
+					document.getElementById("texte").innerHTML = good_etape1[step];
+					document.getElementById("choixL").innerHTML = ". ";
+					document.getElementById("choixR").innerHTML = "Continuer";
 				}
 			}else if (branche=="good1"){
 				if(choix==false) {
-					if(step<good_etape1.rows.length-1){
-						document.getElementById("texte").innerHTML = based[step];
+					if(step<5){
+						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = ". ";
 						document.getElementById("choixR").innerHTML = "Continuer";
 					}
 					else {
-						document.getElementById("texte").innerHTML = based[step];
+						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = ". ";
 						document.getElementById("choixR").innerHTML = "Continuer";
 						choix=true;
@@ -99,19 +102,21 @@
 					choix=true;
 				}
 				else{
-					branche = "bad";
+					branche = "bad";choix=false;
+					step=0;
+					document.getElementById("texte").innerHTML = bad[step];
+					document.getElementById("choixL").innerHTML = ". ";
+					document.getElementById("choixR").innerHTML = "Continuer";
 				}
-			}else if (branche=="bad"){
-				
 			}else if (branche=="good1"){
 				if(choix==false) {
-					if(step<good_etape1.rows.length-1){
-						document.getElementById("texte").innerHTML = based[step];
+					if(step<5){
+						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = ". ";
 						document.getElementById("choixR").innerHTML = "Continuer";
 					}
 					else {
-						document.getElementById("texte").innerHTML = based[step];
+						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = ". ";
 						document.getElementById("choixR").innerHTML = "Continuer";
 						choix=true;
