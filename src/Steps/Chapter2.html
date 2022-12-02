@@ -29,102 +29,17 @@
 
 		function boutR() {
             step=step+1;
-			if(branche=="base") {
-				if(choix==false){
+			if(step<3) {
 					document.getElementById("texte").innerHTML = based[step];
-					document.getElementById("choixL").innerHTML = "Ne pas répondre";
-					document.getElementById("choixR").innerHTML = "répondre";
-					choix=true;
-				}
-				else{
-					branche = "good1";
-					choix=false;
-					step=0;
-				}
-			}else if (branche=="good1"){
-				if(choix==false) {
-					if(step<good_etape1.rows.length-1){
-						document.getElementById("texte").innerHTML = based[step];
-						document.getElementById("choixL").innerHTML = ". ";
-						document.getElementById("choixR").innerHTML = "Continuer";
-					}
-					else {
-						document.getElementById("texte").innerHTML = based[step];
-						document.getElementById("choixL").innerHTML = ". ";
-						document.getElementById("choixR").innerHTML = "Continuer";
-						choix=true;
-					}
-				}else {
-					branche = "good2";
-					choix=false;
-					step=0;				
-				}
+					document.getElementById("choixR").innerHTML = "Continuer";
+			} else {
+				document.location.href="./Chapitre3.html?choixP=good";
 			}
-			else if (branche=="good2"){
-				
-			}
-			else if (branche=="good3"){
-				
-			}
-			else if (branche=="bad"){
-			
-			}
-			else if (branche=="med"){
-			
-			}
-			else {
-				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
-			}
+
         }
 		
 		
-		function boutL() {
-            step=step+1;
-			if(branche=="base") {
-				if(choix==false){
-					document.getElementById("texte").innerHTML = based[step];
-					document.getElementById("choixL").innerHTML = "Ne pas répondre";
-					document.getElementById("choixR").innerHTML = "répondre";
-					choix=true;
-				}
-				else{
-					branche = "bad";
-				}
-			}else if (branche=="bad"){
-				
-			}else if (branche=="good1"){
-				if(choix==false) {
-					if(step<good_etape1.rows.length-1){
-						document.getElementById("texte").innerHTML = based[step];
-						document.getElementById("choixL").innerHTML = ". ";
-						document.getElementById("choixR").innerHTML = "Continuer";
-					}
-					else {
-						document.getElementById("texte").innerHTML = based[step];
-						document.getElementById("choixL").innerHTML = ". ";
-						document.getElementById("choixR").innerHTML = "Continuer";
-						choix=true;
-					}
-				}else {
-					branche = "good2";
-					choix=false;
-					step=0;				
-				}
-			}
-			else if (branche=="good2"){
-				
-			}
-			else if (branche=="good3"){
-				
-			}
-			else if (branche=="med"){
-			
-			}
-			else {
-				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
-			}
-			
-        }
+	
 
 	</script>
 </html>
