@@ -9,8 +9,8 @@
     <body class="chapter1">
 		<footer class="bottom">
 			<div class="dialogue"><span id="texte"></span></div>
-			<button onclick="myFunction()"><span id="repL"></span></button>
-			<button onclick="myFunction()"><span id="repR"></span></button>
+			<button onclick="myFunction()">droite</span></button>
+			<button onclick="myFunction()">gauche</span></button>
 		</footer>
 
 		
@@ -19,20 +19,22 @@
     </body>
 	
 	<script>
+	/*
 		let rep;
 		let based=["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"];
 		let bad = []; 
-		let good = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\""];
+		let good = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\"", ];
 		let med = [];
 		
 		
 		let branch="base";
 		let step=0;
 		let len=sizeof(dialog["base"]);
+	*/
+		let texte="F";
 		
-		let texte=based[1];
 		document.getElementById("texte").innerHTML = texte;
-		document.getElementById("repL").innerHTML = "Continuer";
+		/*document.getElementById("repL").innerHTML = "Continuer";
 		document.getElementById("repR").innerHTML = "";
 		
 		
@@ -47,7 +49,7 @@
 			}
 		
 			document.getElementById("texte").value =   document.getElementById("field1").value;
-		}
+		}*/
 
 	 /*
 	 while(step<$len){
@@ -68,6 +70,6 @@
 		}
 		
 	}
-	
+	*/
 	</script>
 </html>
