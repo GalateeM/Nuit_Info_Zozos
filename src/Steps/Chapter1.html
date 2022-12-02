@@ -22,15 +22,18 @@
 		let rep;
 		let based=["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"];
 		let bad = [""]; 
-		let good_etape1 = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\"", "Moi : Désolé, je ne me rappelle pas ni de qui tu es, ni de la soirée d'hier.", "?? : Ah... Je vois...", "Moi : Tu es qui ducoup stp? Tu pourrais me rafraîchir la mémoire sur ce qu'il s'est passé?", "Alix : C'est Alix, c'est moi qui ai organisé la soirée. Après quelques verres on s'est échapé dans ma chambre et je te laisse imaginer la suite...", "Moi : Merci beaucoup, oui j'imagine bien la suite ahah", "Je vais poser une question..."];
+		let good_etape1 = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\"", "Répondre ?", "Moi : Désolé, je ne me rappelle pas ni de qui tu es, ni de la soirée d'hier.", "?? : Ah... Je vois...", "Moi : Tu es qui du coup stp? Tu pourrais me rafraîchir la mémoire sur ce qu'il s'est passé?", "Alix : C'est Alix, c'est moi qui ai organisé la soirée. Après quelques verres on s'est échapé dans ma chambre et je te laisse imaginer la suite...", "Moi : Merci beaucoup, oui j'imagine bien la suite ahah", "Je vais poser une question..."];
 		let good_etape2 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal"]
 		let good_etape3 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal"]
-		let med = ["Moi : ça te dit qu'on se revoit à l'ocas ?", "Alix : J'aurais bien aimé mais je suis rentrée chez mes parents en Belgique", "Moi : Ah ok, pas de problème. J'espère qu'on pourra se revoir"];
+		let med = ["Moi : ça te dit qu'on se revoit à l'ocas' ?", "Alix : J'aurais bien aimé mais je suis rentrée chez mes parents en Belgique", "Moi : Ah ok, pas de problème. J'espère qu'on pourra se revoir"];
 		
 		let texte="F";
 		let Choix=false;
 		step = 0;
 
+		/*
+		let len=sizeof(dialog["base"]);
+		*/
 		document.getElementById("texte").innerHTML = based[step];
 		document.getElementById("choixL").innerHTML = ". ";
 		document.getElementById("choixR").innerHTML = "Continuer";
@@ -43,8 +46,8 @@
 			if(branche=="base") {
 				if(choix==false){
 					document.getElementById("texte").innerHTML = based[step];
-					document.getElementById("choixL").innerHTML = "Ne pas répondre";
-					document.getElementById("choixR").innerHTML = "répondre";
+					document.getElementById("choixL").innerHTML = "Ne pas regarder";
+					document.getElementById("choixR").innerHTML = "Regarder";
 					choix=true;
 				}
 				else{
@@ -57,21 +60,29 @@
 				}
 			}else if (branche=="good1"){
 				if(choix==false) {
-					if(step<5){
+					if(step<7 && step !=1){
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = ". ";
 						document.getElementById("choixR").innerHTML = "Continuer";
 					}
-					else {
+					else if(step ==1){
+						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").innerHTML = "Ne pas répondre";
+						document.getElementById("choixR").innerHTML = "répondre";
+						choix=True;
+						
+					}else {
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = ". ";
 						document.getElementById("choixR").innerHTML = "Continuer";
 						choix=true;
 					}
 				}else {
-					branche = "good2";
-					choix=false;
-					step=0;				
+					if(step !=2){
+						branche = "good2";
+						choix=false;
+						step=0;	
+					}
 				}
 			}
 			else if (branche=="good2"){
@@ -97,8 +108,8 @@
 			if(branche=="base") {
 				if(choix==false){
 					document.getElementById("texte").innerHTML = based[step];
-					document.getElementById("choixL").innerHTML = "Ne pas répondre";
-					document.getElementById("choixR").innerHTML = "répondre";
+					document.getElementById("choixL").innerHTML = "Ne pas regarder";
+					document.getElementById("choixR").innerHTML = "Regarder";
 					choix=true;
 				}
 				else{
@@ -110,21 +121,34 @@
 				}
 			}else if (branche=="good1"){
 				if(choix==false) {
-					if(step<5){
+					if(step<7 && step !=1){
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = ". ";
 						document.getElementById("choixR").innerHTML = "Continuer";
 					}
-					else {
+					else if(step ==1){
+						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").innerHTML = "Ne pas répondre";
+						document.getElementById("choixR").innerHTML = "répondre";
+						choix=True;
+						
+					}else {
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = ". ";
 						document.getElementById("choixR").innerHTML = "Continuer";
 						choix=true;
 					}
 				}else {
-					branche = "good2";
-					choix=false;
-					step=0;				
+					if(step==2){
+						branche=="bad"
+						choix=false;
+						step=0;
+					}
+					else {
+						branche = "med";
+						choix=false;
+						step=0;	
+					}
 				}
 			}
 			else if (branche=="good2"){
