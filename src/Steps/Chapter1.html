@@ -105,16 +105,17 @@
 						document.getElementById("texte").innerHTML = good_etape2[step];
 					}
 					if(step==4) {
+						document.getElementById("texte").innerHTML = good_etape2[step];
 						document.getElementById("choixL").style.visibility = 'visible';
-						document.getElementById("choixL").innerHTML = "Oui";
-						document.getElementById("choixR").innerHTML = "Non";
+						document.getElementById("choixL").innerHTML = "Non";
+						document.getElementById("choixR").innerHTML = "Oui";
 						choix=true;
 					}
 				}
 				else {
 					choix=false;
 					step=0;
-					document.location.href="./Chapitre3.html?choixP=bad1";
+					document.location.href="./ Chapter1_scene2.html";
 					document.getElementById("choixL").style.visibility = 'hidden';
 					document.getElementById("choixR").innerHTML = "Continuer";
 				}
@@ -200,6 +201,7 @@
 						document.getElementById("texte").innerHTML = good_etape2[step];
 					}
 					if(step==4) {
+						document.getElementById("texte").innerHTML = good_etape2[step];
 						document.getElementById("choixL").style.visibility = 'visible';
 						document.getElementById("choixL").innerHTML = "Oui";
 						document.getElementById("choixR").innerHTML = "Non";
@@ -207,17 +209,15 @@
 					}
 				}
 				else {
-					branche = "med";
 					choix=false;
-					step=5;
-					document.getElementById("texte").innerHTML = med[step];
+					step=0;
+					document.location.href="./ Chapter1_scene3.html";
+					document.getElementById("choixL").style.visibility = 'hidden';
+					document.getElementById("choixR").innerHTML = "Continuer";
 				}
 			}
-			else if (branche=="good3"){
-				document.location.href="./Chapitre3.html?choixP=bad1";
-			}
 			else if (branche=="med"){
-				if(step<4){
+				if(step<3){
 					document.getElementById("choixL").style.visibility = 'hidden';
 					document.getElementById("choixR").innerHTML = "Continuer";
 					document.getElementById("texte").innerHTML = med[step];
