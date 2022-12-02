@@ -49,12 +49,36 @@
 					choix=true;
 				}
 				else{
-					branch = "good";
+					branch = "good1";
+					choix=false;
+					step=0;
 				}
-			}else if (branch=="bad"){
+			}else if (branch=="good1"){
+				if(choix==false) {
+					if(step<good_etape1.rows.length-1){
+						document.getElementById("texte").innerHTML = based[step];
+						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixR").innerHTML = "Continuer";
+					}
+					else {
+						document.getElementById("texte").innerHTML = based[step];
+						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixR").innerHTML = "Continuer";
+						choix=true;
+					}
+				else {
+					branch = "good2";
+					choix=false;
+					step=0;				
+				}
+			}
+			else if (branch=="good2"){
 				
 			}
-			else if (branch=="good"){
+			else if (branch=="good3"){
+				
+			}
+			else if (branch=="bad"){
 			
 			}
 			else if (branch=="med"){
@@ -81,9 +105,30 @@
 				}
 			}else if (branch=="bad"){
 				
+			}else if (branch=="good1"){
+				if(choix==false) {
+					if(step<good_etape1.rows.length-1){
+						document.getElementById("texte").innerHTML = based[step];
+						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixR").innerHTML = "Continuer";
+					}
+					else {
+						document.getElementById("texte").innerHTML = based[step];
+						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixR").innerHTML = "Continuer";
+						choix=true;
+					}
+				else {
+					branch = "good2";
+					choix=false;
+					step=0;				
+				}
 			}
-			else if (branch=="good"){
-			
+			else if (branch=="good2"){
+				
+			}
+			else if (branch=="good3"){
+				
 			}
 			else if (branch=="med"){
 			
