@@ -9,8 +9,8 @@
     <body class="chapter1">
 		<footer class="bottom">
 			<div class="dialogue"><span id="texte"></span></div>
-			<button  type="submit" id="choixL" onclick="myFunction(good)"></button>
-			<button type="submit" id="choixR" onclick="myFunction(good)" id="choixR"></button>
+			<button  type="submit" id="choixL" onclick="boutL(good)"></button>
+			<button type="submit" id="choixR" onclick="boutR(good)" id="choixR"></button>
 		</footer>
 
 		
@@ -27,42 +27,72 @@
 		let good_etape3 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal"]
 		let med = ["Moi : ça te dit qu'on se revoit à l'ocas ?", "Alix : J'aurais bien aimé mais je suis rentrée chez mes parents en Belgique", "Moi : Ah ok, pas de problème. J'espère qu'on pourra se revoir"];
 		
-		let step=0;
-		let branch="base";
+		let texte="F";
+		let Choix=false;
+
 		/*
 		let len=sizeof(dialog["base"]);
 		*/
 		document.getElementById("texte").innerHTML = based[step];
 		document.getElementById("choixL").innerHTML = ". ";
 		document.getElementById("choixR").innerHTML = "Continuer";
+		choix=false;
 
 
-
-		function myFunction(branch) {
+		function boutR(branch) {
             step=step+1;
-			document.getElementById("texte").innerHTML = based[step];
+			if(branch=="base") {
+				if(choix==false){
+					document.getElementById("texte").innerHTML = based[step];
+					document.getElementById("choixL").innerHTML = "Ne pas répondre";
+					document.getElementById("choixR").innerHTML = "répondre";
+					choix=true;
+				}
+				else{
+					branch = "good";
+				}
+			}else if (branch=="bad"){
+				
+			}
+			else if (branch=="good"){
+			
+			}
+			else if (branch=="med"){
+			
+			}
+			else {
+				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
+			}
+			
+        }
+		
+		
+		function boutL(branch) {
+            step=step+1;
+			if(branch=="base") {
+				if(choix==false){
+					document.getElementById("texte").innerHTML = based[step];
+					document.getElementById("choixL").innerHTML = "Ne pas répondre";
+					document.getElementById("choixR").innerHTML = "répondre";
+					choix=true;
+				}
+				else{
+					branch = "bad";
+				}
+			}else if (branch=="bad"){
+				
+			}
+			else if (branch=="good"){
+			
+			}
+			else if (branch=="med"){
+			
+			}
+			else {
+				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
+			}
 			
         }
 
-	 /*
-	 while(step<$len){
-		if(branch=="base"){
-			dialog[base[step]];
-		}
-		else if (branch=="bad"){
-		
-		}
-		else if (branch=="good"){
-		
-		}
-		else if (branch=="med"){
-		
-		}
-		else {
-			 "Ayo wtf ?";
-		}
-		
-	
-	}*/
 	</script>
 </html>
