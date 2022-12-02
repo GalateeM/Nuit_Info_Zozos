@@ -18,11 +18,11 @@
 	
 	<script>
 		let rep;
-		let based=["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"];
+		let based=["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappelle plus de rien! Qu'est-ce que j'ai mal à la tête...", "Le téléphone vibre."];
 		let bad = [""]; 
-		let good_etape1 = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore pour hier soir ;)\"", "Répondre ?", "Moi : Désolé, je ne me rappelle pas ni de qui tu es, ni de la soirée d'hier.", "?? : Ah... Je vois...", "Moi : Tu es qui du coup stp? Tu pourrais me rafraîchir la mémoire sur ce qu'il s'est passé?", "Alix : C'est Alix, c'est moi qui ai organisé la soirée. Après quelques verres on s'est échapé dans ma chambre et je te laisse imaginer la suite...", "Moi : Merci beaucoup, oui j'imagine bien la suite ahah", "Je vais poser une question..."];
-		let good_etape2 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal", "Je décroche. Est ce que je devrai aller prendre un traitement d'urgence TPE ?"]
-		let med = ["Moi : ça te dit qu'on se revoit à l'ocas' ?", "Alix : J'aurais bien aimé mais je suis rentrée chez mes parents en Belgique", "Moi : Ah ok, pas de problème. J'espère qu'on pourra se revoir"];
+		let good_etape1 = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore pour hier soir ;)\"", "Répondre ?", "Moi : Désolé, je ne me rappelle pas ni de qui tu es, ni de la soirée d'hier.", "?? : Ah... Je vois...", "Moi : Tu es qui du coup stp? Tu pourrais me rafraîchir la mémoire sur ce qu'il s'est passé?", "Alix : C'est Alix, c'est moi qui ait organisé la soirée. Après quelques verres on s'est échapés dans ma chambre et je te laisse imaginer la suite...", "Moi : Merci beaucoup, oui j'imagine bien la suite ahah.", "Je vais poser une question..."];
+		let good_etape2 = ["Moi : Tu te rappelles si on s'est protégés ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problèmes, c'est normal.", "Je décroche. Est-ce que je devrai aller prendre un traitement d'urgence TPE ?"]
+		let med = ["Moi : ça te dit qu'on se revoit à l'occas' ?", "Alix : J'aurai bien aimé mais je suis rentrée chez mes parents en Belgique", "Moi : Ah ok, pas de problèmes. J'espère qu'on pourra se revoir."];
 		
 		let texte="F";
 		let Choix=false;
@@ -67,7 +67,7 @@
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").style.visibility = 'visible';
 						document.getElementById("choixL").innerHTML = "Ne pas répondre";
-						document.getElementById("choixR").innerHTML = "répondre";
+						document.getElementById("choixR").innerHTML = "Répondre";
 						choix=true;
 					
 					}else if(step==6){
@@ -161,7 +161,7 @@
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").style.visibility = 'visible';
 						document.getElementById("choixL").innerHTML = "Ne pas répondre";
-						document.getElementById("choixR").innerHTML = "répondre";
+						document.getElementById("choixR").innerHTML = "Répondre";
 						choix=True;
 					}else if(step==6){
 						document.getElementById("texte").innerHTML = good_etape1[step];
