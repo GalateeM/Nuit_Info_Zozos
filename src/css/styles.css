@@ -103,12 +103,24 @@ div.btn {
   
 }
 
+<<<<<<< HEAD
 
+=======
+div.dialogue {
+  width: 90vw;
+  height: 10vw;
+  background: rgba(176, 115, 115, 0.686);
+  border-radius: 0.5rem;
+  margin : 2vw 5vw;
+  padding : 0.5rem 0.7rem;
+}
+/*
+>>>>>>> b6992e70d2dbb3ab943cbec0642837c4249f0d0e
 footer.bottom {
   position: absolute;
   bottom: 0;
   left: 0;
-}
+}*/
 
 *,
 *::before,
