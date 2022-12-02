@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href=".css" />
+        <title>Game</title>
+    </head>
+    
+    <body>
+		
+		<p><span id="texte"></span></p>
+		
+		<button onclick="myFunction()">Copy Text</button>
+		
+    </body>
+	
+	<script>
+		/*let rep;
+		let StartPoint;
+		let dialog=["based"=>["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"],
+		"bad"=>[], 
+		"good"=>[],
+		"med"=>[]
+		];
+		let branch="base";
+		let step=0;
+		let len=sizeof(dialog["base"]);*/
+		let texte="J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...";
+		document.getElementById("texte").innerHTML = texte;
+		
+		function myFunction(step, branch) {
+			document.getElementById("field2").value =   document.getElementById("field1").value;
+		}
+
+	 /*
+	 while(step<$len){
+		if(branch=="base"){
+			dialog[base[step]];
+		}
+		else if (branch=="bad"){
+		
+		}
+		else if (branch=="good"){
+		
+		}
+		else if (branch=="med"){
+		
+		}
+		else {
+			 "Ayo wtf ?";
+		}
+		
+	}
+	
+	 '<input type="button" value="Click Me" />';*/
+	</script>
+</html>
