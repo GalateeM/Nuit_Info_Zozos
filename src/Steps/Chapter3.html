@@ -72,6 +72,8 @@
 				if (branche == "base") {
 					if(choix==false){
 						document.getElementById("texte").innerHTML = based[step];
+						document.getElementById("choixL").style.visibility = 'visible';
+						document.getElementById("choixR").style.visibility = 'visible';
 						document.getElementById("choixL").innerHTML = "Ne pas aller en acheter";
 						document.getElementById("choixR").innerHTML = "Aller en acheter";
 						choix=true;
@@ -95,6 +97,8 @@
 						document.getElementById("texte").innerHTML = good2[1];
 						document.getElementById("choixL").style.visibility = 'hidden';
 						document.getElementById("choixR").innerHTML = "Continuer";
+					} else if (step==3) {
+						document.location.href="./Final.html?fin=3";
 					}
 				}
 			}
@@ -106,18 +110,21 @@
 				if (step == 0) {
 					document.getElementById("texte").innerHTML = "Tant pis pour les préservatifs, nous ferons sans. Je ne la préviens pas, pour ne pas interrompre la soirée. La nuit est agréable et nous entamons une relation sérieuse.";
 					document.getElementById("choixL").innerHTML = "Continuer";
-					document.getElementById("choixL").style.visibility = 'hidden';
+					document.getElementById("choixR").style.visibility = 'hidden';
 					step = step + 1;
 				} else if (step == 1) {
 					document.getElementById("texte").innerHTML = "Trois mois plus tard, elle est atteinte de symptômes grippaux. Sur les conseils de son médecin elle se fait dépister du VIH. Elle m'apprend qu'elle est séropositive et me demande si nous nous sommes toujours protégés. Je lui avoue la vérité, abattu. Choquée elle me largue et menace de me poursuivre en justice.";
 					document.getElementById("choixL").innerHTML = "Continuer";
-					document.getElementById("choixL").style.visibility = 'hidden';
+					document.getElementById("choixR").style.visibility = 'hidden';
 					step = step + 1;
 				} else if (step == 2) {
 					document.getElementById("texte").innerHTML = "Je fais à mon tour un test de dépistage : je suis séropositif.  Mon médecin me prescrit un traitement sur le long terme, mais suite à cette prise en charge tardive, mes chances de retrouver mon état de santé initial sont moindres.";
 					document.getElementById("choixL").innerHTML = "Continuer";
-					document.getElementById("choixL").style.visibility = 'hidden';
+					document.getElementById("choixR").style.visibility = 'hidden';
 					step = step + 1;
+				}
+				else if (step==3) {
+					document.location.href="./Final.html?fin=4";
 				}
 			}
 			
