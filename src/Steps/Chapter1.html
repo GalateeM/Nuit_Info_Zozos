@@ -9,8 +9,8 @@
     <body class="chapter1">
 		<footer class="bottom">
 			<div class="dialogue"><span id="texte"></span></div>
-			<button onclick="myFunction()"><span id="repL"></span></button>
-			<button onclick="myFunction()"><span id="repR"></span></button>
+			<button  type="submit" id="choixL" onclick="myFunction(good)"></button>
+			<button type="submit" id="choixR" onclick="myFunction(good)" id="choixR"></button>
 		</footer>
 
 		
@@ -26,52 +26,72 @@
 		let good = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\""];
 		let med = [];
 		
-		
-		let branch="base";
-		let step=0;
-		let len=sizeof(dialog["base"]);
-		
-		let texte=based[0];
-		texte = "test";
-		document.getElementById("texte").innerHTML = texte;
-		document.getElementById("repL").innerHTML = "Continuer";
-		document.getElementById("repR").innerHTML = "";
-		
-		
-		
-		
-		
-		function myFunction(step, branch) {
-			if(branch=="base"){
-				if(step==1){
-					
-				}
-			}
-		
-			document.getElementById("texte").value =   document.getElementById("field1").value;
-		}*/
-		let texte="test";
-		document.getElementById("texte").innerHTML = texte;
+		let texte="F";
+		let Choix=false;
 
-	 /*
-	 while(step<$len){
-		if(branch=="base"){
-			dialog[base[step]];
-		}
-		else if (branch=="bad"){
+		/*
+		let len=sizeof(dialog["base"]);
+		*/
+		document.getElementById("texte").innerHTML = based[step];
+		document.getElementById("choixL").innerHTML = ". ";
+		document.getElementById("choixR").innerHTML = "Continuer";
+		choix=false;
+
+
+		function boutR(branch) {
+            step=step+1;
+			if(branch=="base") {
+				if(choix==false){
+					document.getElementById("texte").innerHTML = based[step];
+					document.getElementById("choixL").innerHTML = "Ne pas répondre";
+					document.getElementById("choixR").innerHTML = "répondre";
+					choix=true;
+				}
+				else{
+					branch = "good";
+				}
+			}else if (branch=="bad"){
+				
+			}
+			else if (branch=="good"){
+			
+			}
+			else if (branch=="med"){
+			
+			}
+			else {
+				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
+			}
+			
+        }
 		
-		}
-		else if (branch=="good"){
 		
-		}
-		else if (branch=="med"){
-		
-		}
-		else {
-			 "Ayo wtf ?";
-		}
-		
-	}*/
-	
+		function boutL(branch) {
+            step=step+1;
+			if(branch=="base") {
+				if(choix==false){
+					document.getElementById("texte").innerHTML = based[step];
+					document.getElementById("choixL").innerHTML = "Ne pas répondre";
+					document.getElementById("choixR").innerHTML = "répondre";
+					choix=true;
+				}
+				else{
+					branch = "bad";
+				}
+			}else if (branch=="bad"){
+				
+			}
+			else if (branch=="good"){
+			
+			}
+			else if (branch=="med"){
+			
+			}
+			else {
+				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
+			}
+			
+        }
+
 	</script>
 </html>
