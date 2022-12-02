@@ -82,11 +82,12 @@
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").innerHTML = ". ";
 						document.getElementById("choixR").innerHTML = "Continuer";
-						//branche = "good2";
-						//choix=false;
-						//step=0;	
+						choix=false;
 					}
-					if(step<8 && step>2) {
+					else {
+						branche = "good2";
+						choix=false;
+						step=0;
 						document.getElementById("texte").innerHTML = good_etape2[step];
 					}
 				}
@@ -131,6 +132,7 @@
 					document.location.href="./Chapitre3.html?choixP=bad1"; 
 				}
 			}else if (branche=="good1"){
+				debugger
 				if(choix==false) {
 					if(step<7 && step !=1){
 						
