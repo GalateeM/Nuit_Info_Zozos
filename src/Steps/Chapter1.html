@@ -35,7 +35,7 @@
 		let len=sizeof(dialog["base"]);
 		*/
 		document.getElementById("texte").innerHTML = based[step];
-		document.getElementById("choixL").innerHTML = ". ";
+		document.getElementById("choixL").style.visibility = 'hidden';
 		document.getElementById("choixR").innerHTML = "Continuer";
 		choix=false;
 		branche="base";
@@ -46,6 +46,7 @@
 			if(branche=="base") {
 				if(choix==false){
 					document.getElementById("texte").innerHTML = based[step];
+					document.getElementById("choixL").style.visibility = 'visible';
 					document.getElementById("choixL").innerHTML = "Ne pas regarder";
 					document.getElementById("choixR").innerHTML = "Regarder";
 					choix=true;
@@ -55,32 +56,33 @@
 					choix=false;
 					step=0;
 					document.getElementById("texte").innerHTML = good_etape1[step];
-					document.getElementById("choixL").innerHTML = ". ";
+					document.getElementById("choixL").style.visibility = 'hidden';
 					document.getElementById("choixR").innerHTML = "Continuer";
 				}
 			}else if (branche=="good1"){
 				if(choix==false) {
 					if(step<7 && step !=1){
 						document.getElementById("texte").innerHTML = good_etape1[step];
-						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixL").style.visibility = 'hidden';
 						document.getElementById("choixR").innerHTML = "Continuer";
 					}
 					else if(step ==1){
 						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").style.visibility = 'visible';
 						document.getElementById("choixL").innerHTML = "Ne pas répondre";
 						document.getElementById("choixR").innerHTML = "répondre";
 						choix=true;
 						
 					}else {
 						document.getElementById("texte").innerHTML = good_etape1[step];
-						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixL").style.visibility = 'hidden';
 						document.getElementById("choixR").innerHTML = "Continuer";
 						choix=true;
 					}
 				}else {
 					if(step ==2){
 						document.getElementById("texte").innerHTML = good_etape1[step];
-						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixL").style.visibility = 'hidden';
 						document.getElementById("choixR").innerHTML = "Continuer";
 						choix=false;
 					}
@@ -97,7 +99,7 @@
 					document.getElementById("texte").innerHTML = good_etape2[step];
 				}
 				if(step==3) {
-					document.getElementById("choixL").innerHTML = ". ";
+					document.getElementById("choixL").style.visibility = 'hidden';
 					document.getElementById("choixR").innerHTML = "Continuer";
 				}
 
@@ -122,6 +124,7 @@
 			if(branche=="base") {
 				if(choix==false){
 					document.getElementById("texte").innerHTML = based[step];
+					document.getElementById("choixL").style.visibility = 'visible';
 					document.getElementById("choixL").innerHTML = "Ne pas regarder";
 					document.getElementById("choixR").innerHTML = "Regarder";
 					choix=true;
@@ -137,18 +140,19 @@
 					if(step<7 && step !=1){
 						
 						document.getElementById("texte").innerHTML = good_etape1[step];
-						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixL").style.visibility = 'hidden';
 						document.getElementById("choixR").innerHTML = "Continuer";
 					}
 					else if(step ==1){
 						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").style.visibility = 'visible';
 						document.getElementById("choixL").innerHTML = "Ne pas répondre";
 						document.getElementById("choixR").innerHTML = "répondre";
 						choix=True;
 						
 					}else {
 						document.getElementById("texte").innerHTML = good_etape1[step];
-						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixL").style.visibility = 'hidden';
 						document.getElementById("choixR").innerHTML = "Continuer";
 						choix=true;
 					}
