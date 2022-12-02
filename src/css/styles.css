@@ -67,22 +67,42 @@
 body.chapter1 {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: url("../assets/img/porte_e.png");
+  background: url("../assets/img/chambre.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
+}
+
+
+div.dialogue {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  width: 90vw;
+  height: 12vw;
+  background: rgba(60, 60, 60, 0.686);
+  border-radius: 0.5rem;
+  margin : 2vw 5vw;
+  padding : 1rem 1.5rem;
+}
+
+div.btn {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1.4rem;
+  color: white;
+  width: 10vw;
+  height: 5vw;
+  background: rgba(60, 60, 60, 0.686);
+  border-radius: 0.5rem;
+  margin : 2vw 5vw;
+  padding : 1rem 1.5rem;
+}
+
+#repR {
   
 }
 
-div.dialogue {
-  width: 90vw;
-  height: 10vw;
-  background: rgba(176, 115, 115, 0.686);
-  border-radius: 0.5rem;
-  margin : 2vw 5vw;
-  padding : 0.5rem 0.7rem;
-}
 
 footer.bottom {
   position: absolute;
