@@ -6,10 +6,9 @@
         <title>Game</title>
     </head>
 
-    <body class="chapter1">
+    <body class="chapter2">
 		<footer class="bottom">
 			<div class="dialogue"><span id="texte"></span></div>
-			<button type="submit" id="choixL" onclick="boutL()" id="choixL"></button>
 			<button type="submit" id="choixR" onclick="boutR()" id="choixR"></button>
 		</footer>
 
@@ -19,23 +18,14 @@
     </body>
 	
 	<script>
+		let queryParams = new URLSearchParams(window.location.search);
+		let name = queryParams.get("name");
 		let rep;
-		let based=["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"];
-		let bad = [""]; 
-		let good_etape1 = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\"", "Moi : Désolé, je ne me rappelle pas ni de qui tu es, ni de la soirée d'hier.", "?? : Ah... Je vois...", "Moi : Tu es qui ducoup stp? Tu pourrais me rafraîchir la mémoire sur ce qu'il s'est passé?", "Alix : C'est Alix, c'est moi qui ai organisé la soirée. Après quelques verres on s'est échapé dans ma chambre et je te laisse imaginer la suite...", "Moi : Merci beaucoup, oui j'imagine bien la suite ahah", "Je vais poser une question..."];
-		let good_etape2 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal"]
-		let good_etape3 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal"]
-		let med = ["Moi : ça te dit qu'on se revoit à l'ocas ?", "Alix : J'aurais bien aimé mais je suis rentrée chez mes parents en Belgique", "Moi : Ah ok, pas de problème. J'espère qu'on pourra se revoir"];
-		
-		let texte="F";
-		let Choix=false;
+		let based=["Vous avez le virus de l'immunodéficience humaine, aussi appelé VIH.", "Malgré les préjugés, ce virus n'est pas une fatalité. Avec un traitement adapté, vous pourrez vivre normalement.",
+		"Vous pourrez même ne plus avoir de risque de transmission du virus, une fois que votre charge virale sera assez faible."];
 		step = 0;
 
-		/*
-		let len=sizeof(dialog["base"]);
-		*/
 		document.getElementById("texte").innerHTML = based[step];
-		document.getElementById("choixL").innerHTML = ". ";
 		document.getElementById("choixR").innerHTML = "Continuer";
 		choix=false;
 		branche="base";
