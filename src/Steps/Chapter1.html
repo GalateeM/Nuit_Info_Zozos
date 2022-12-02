@@ -9,8 +9,8 @@
     <body class="chapter1">
 		<footer class="bottom">
 			<div class="dialogue"><span id="texte"></span></div>
-			<button  type="submit" id="choixL" onclick="boutL(good)"></button>
-			<button type="submit" id="choixR" onclick="boutR(good)" id="choixR"></button>
+			<button type="submit" id="choixL" onclick="boutL()" id="choixL"></button>
+			<button type="submit" id="choixR" onclick="boutR()" id="choixR"></button>
 		</footer>
 
 		
@@ -29,6 +29,7 @@
 		
 		let texte="F";
 		let Choix=false;
+		step = 0;
 
 		/*
 		let len=sizeof(dialog["base"]);
@@ -37,11 +38,12 @@
 		document.getElementById("choixL").innerHTML = ". ";
 		document.getElementById("choixR").innerHTML = "Continuer";
 		choix=false;
+		branchee="base";
 
 
-		function boutR(branch) {
+		function boutR() {
             step=step+1;
-			if(branch=="base") {
+			if(branchee=="base") {
 				if(choix==false){
 					document.getElementById("texte").innerHTML = based[step];
 					document.getElementById("choixL").innerHTML = "Ne pas répondre";
@@ -49,11 +51,11 @@
 					choix=true;
 				}
 				else{
-					branch = "good1";
+					branche = "good1";
 					choix=false;
 					step=0;
 				}
-			}else if (branch=="good1"){
+			}else if (branche=="good1"){
 				if(choix==false) {
 					if(step<good_etape1.rows.length-1){
 						document.getElementById("texte").innerHTML = based[step];
@@ -66,34 +68,33 @@
 						document.getElementById("choixR").innerHTML = "Continuer";
 						choix=true;
 					}
-				} else {
-					branch = "good2";
+				}else {
+					branche = "good2";
 					choix=false;
 					step=0;				
 				}
 			}
-			else if (branch=="good2"){
+			else if (branche=="good2"){
 				
 			}
-			else if (branch=="good3"){
+			else if (branche=="good3"){
 				
 			}
-			else if (branch=="bad"){
+			else if (branche=="bad"){
 			
 			}
-			else if (branch=="med"){
+			else if (branche=="med"){
 			
 			}
 			else {
 				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
 			}
-			
         }
 		
 		
-		function boutL(branch) {
+		function boutL() {
             step=step+1;
-			if(branch=="base") {
+			if(branchee=="base") {
 				if(choix==false){
 					document.getElementById("texte").innerHTML = based[step];
 					document.getElementById("choixL").innerHTML = "Ne pas répondre";
@@ -101,11 +102,11 @@
 					choix=true;
 				}
 				else{
-					branch = "bad";
+					branchee = "bad";
 				}
-			}else if (branch=="bad"){
+			}else if (branchee=="bad"){
 				
-			}else if (branch=="good1"){
+			}else if (branchee=="good1"){
 				if(choix==false) {
 					if(step<good_etape1.rows.length-1){
 						document.getElementById("texte").innerHTML = based[step];
@@ -118,19 +119,19 @@
 						document.getElementById("choixR").innerHTML = "Continuer";
 						choix=true;
 					}
-				else {
-					branch = "good2";
+				}else {
+					branchee = "good2";
 					choix=false;
 					step=0;				
 				}
 			}
-			else if (branch=="good2"){
+			else if (branche=="good2"){
 				
 			}
-			else if (branch=="good3"){
+			else if (branchee=="good3"){
 				
 			}
-			else if (branch=="med"){
+			else if (branche=="med"){
 			
 			}
 			else {
