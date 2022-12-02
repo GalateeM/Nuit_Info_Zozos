@@ -79,6 +79,16 @@
   background-color: #ffffff3a;
 }
 
+body.mur {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: url("../assets/img/mur.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
 body.restaurant {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
