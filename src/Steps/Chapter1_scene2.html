@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <title>Game</title>
+    </head>
+
+    <body class="chapter1">
+		<footer class="bottom">
+			<div class="dialogue"><span id="texte"></span></div>
+			<button type="submit" id="choixR" onclick="boutR()" id="choixR"></button>
+		</footer>
+    </body>
+	
+	<script>
+		let based=["Je me suis rendu en pharmacie afin de me procurer un autotest VIH et me suis fait celui-ci aussitôt. Le résultat est négatif.",
+                    "Sur les conseilles du standardiste au numéro d'urgence SIDA Info service '0 800 840 800', je me rends chez mon médecin.",
+                    "Celui-ci me parle du <a href='https://fr.wikipedia.org/wiki/Traitement_post-exposition_de_l%27infection_au_VIH' target='_blank'>TPE</a> (Traitement PostExposition) qui est un traitement à prendre le plus tôt possible après un rapport non-protégé.",
+                    "Cependant après évaluation des risques le médecin à décider de me laisser sous simple surveillance médical.",
+                    "<i class='light'>Six semaines passent</i>",
+                    "J'ai réalisé le test <a href='https://fr.wikipedia.org/wiki/Test_VIH#Le_d%C3%A9pistage' target='_blank'>ELISA</a> préscrit par mon médecin et malheureusement les résultat son positif. J'ai donc le VIH malgré la surveillance de mon médecin.",
+                    "Malgré mon choc, mon médecin me rassure et m'explique la démarche que nous allons suivre. Soudain pendant le rendez-vous chez le médecin, mon téléphone sonne.",
+                    "Moi : \"Allo ?\"",
+                    "Alix : \"Salut, je ne sais pas si tu te souviens de moi. On s'est rencontré en boîte il y a à peu près trois mois.\"",
+                    "<i class='light'>Je penses avoir compris la raison de l'appel mais je laisse Alix m'en dire plus</i>",
+                    "Moi : \"Oui, tout à fait, dis-je. Comment vas-tu ?\"",
+                    "Alix : \"Assez mal, à vrai dire. C'est pour ça que je t'appelle : je viens de me faire dépister pour le VIH car je suis dans une relation sérieuse, et il se trouve que ... je suis positive.\"",
+                    "<i class='light'>La raison de son appel était donc bien celle que je pensais.</i>",
+                    "Moi : \"D'accord. Merci beaucoup de m'avoir appelé pour me prévenir. J'ai contracté le VIH probablement suite à notre relation et je suis aujourd'hui en rendez-vous afin d'établir un suivie médical de ma situation\"",
+                    "Alix : \"Je suis tellement désolé.e, je n'avais aucune idée que j'étais porteur.euse. Je ne l'ai appris qu'hier\"",
+                    "Moi : \"Je me doute que tu ne l'aurais pas fait exprès, j'espère que ça ira pour toi et encore merci de m'avoir prévenu\"",
+                    "Alix : \"Derien, c'est normal. Au revoir\"",
+                    "Moi : \"Au revoir"
+                    ]
+		let texte="F";
+		let Choix=false;
+		step = 0;
+
+		/*
+		let len=sizeof(dialog["base"]);
+		*/
+		document.getElementById("texte").innerHTML = based[step];
+		document.getElementById("choixR").innerHTML = "Continuer";
+		choix=false;
+		branche="base";
+
+
+		function boutR() {
+            step=step+1;
+			if(branche=="base") {
+				if(choix==false){
+					document.getElementById("texte").innerHTML = based[step];
+					document.getElementById("choixL").innerHTML = "Ne pas répondre";
+					document.getElementById("choixR").innerHTML = "répondre";
+					choix=true;
+				}
+				else{
+					branche = "good1";
+					choix=false;
+					step=0;
+					document.getElementById("texte").innerHTML = good_etape1[step];
+					document.getElementById("choixL").innerHTML = ". ";
+					document.getElementById("choixR").innerHTML = "Continuer";
+				}
+			}else if (branche=="good1"){
+				if(choix==false) {
+					if(step<5){
+						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixR").innerHTML = "Continuer";
+					}
+					else {
+						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixR").innerHTML = "Continuer";
+						choix=true;
+					}
+				}else {
+					branche = "good2";
+					choix=false;
+					step=0;				
+				}
+			}
+			else if (branche=="good2"){
+				
+			}
+			else if (branche=="good3"){
+				
+			}
+			else if (branche=="bad"){
+			
+			}
+			else if (branche=="med"){
+			
+			}
+			else {
+				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
+			}
+        }
+		
+		
+		function boutL() {
+            step=step+1;
+			if(branche=="base") {
+				if(choix==false){
+					document.getElementById("texte").innerHTML = based[step];
+					document.getElementById("choixL").innerHTML = "Ne pas répondre";
+					document.getElementById("choixR").innerHTML = "répondre";
+					choix=true;
+				}
+				else{
+					branche = "bad";choix=false;
+					step=0;
+					document.getElementById("texte").innerHTML = bad[step];
+					document.getElementById("choixL").innerHTML = ". ";
+					document.getElementById("choixR").innerHTML = "Continuer";
+				}
+			}else if (branche=="good1"){
+				if(choix==false) {
+					if(step<5){
+						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixR").innerHTML = "Continuer";
+					}
+					else {
+						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").innerHTML = ". ";
+						document.getElementById("choixR").innerHTML = "Continuer";
+						choix=true;
+					}
+				}else {
+					branche = "good2";
+					choix=false;
+					step=0;				
+				}
+			}
+			else if (branche=="good2"){
+				
+			}
+			else if (branche=="good3"){
+				
+			}
+			else if (branche=="med"){
+			
+			}
+			else {
+				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
+			}
+			
+        }
+
+	</script>
+</html>
