@@ -9,8 +9,8 @@
     <body class="chapter1">
 		<footer class="bottom">
 			<div class="dialogue"><span id="texte"></span></div>
-			<button  type="submit" id="choixL" onclick="myFunction(0, good)"></button>
-			<button type="submit" id="choixR" onclick="myFunction(0, good)" id="choixR"></button>
+			<button  type="submit" id="choixL" onclick="myFunction(good)"></button>
+			<button type="submit" id="choixR" onclick="myFunction(good)" id="choixR"></button>
 		</footer>
 
 		
@@ -25,18 +25,22 @@
 		let good = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\"", "Moi : Désolé, je ne me rappelle pas ni de qui tu es, ni de la soirée d'hier.", "?? : Ah... Je vois...", "Moi : Tu es qui ducoup stp? Tu pourrais me rafraîchir la mémoire sur ce qu'il s'est passé?", "Alix : C'est Alix, c'est moi qui ai organisé la soirée. Après quelques verres on s'est échapé dans ma chambre et je te laisse imaginer la suite...", "Moi : Merci beaucoup, oui j'imagine bien la suite ahah"];
 		let med = [""];
 		let texte="F";
-		/*
 		
-		let branch="base";
 		let step=0;
+		let branch="base";
+		/*
 		let len=sizeof(dialog["base"]);
 		*/
-		document.getElementById("texte").innerHTML = texte;
-		document.getElementById("choixL").innerHTML = "bla";
+		document.getElementById("texte").innerHTML = based[step];
+		document.getElementById("choixL").innerHTML = ". ";
+		document.getElementById("choixR").innerHTML = "Continuer";
 
 
-		function myFunction(step, branch) {
-            document.getElementById("texte").value =   document.getElementById("field1").value;
+
+		function myFunction(branch) {
+            step=step+1;
+			document.getElementById("texte").innerHTML = based[step];
+			
         }
 
 	 /*
