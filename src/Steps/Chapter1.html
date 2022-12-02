@@ -8,9 +8,9 @@
 
     <body class="chapter1">
 		<footer class="bottom">
-			<div class="dialogue"><span id="choixL"></span></div>
-			<button onclick="myFunction(0, good)"><span id="ChoixL"></span></span></button>
-			<button onclick="myFunction(0, good)"><span id="ChoixR"></span></span></button>
+			<div class="dialogue"><span id="texte"></span></div>
+			<button  type="submit" id="choixL" onclick="myFunction(0, good)"></button>
+			<button type="submit" id="choixR" onclick="myFunction(0, good)" id="choixR"></button>
 		</footer>
 
 		
@@ -19,31 +19,26 @@
     </body>
 	
 	<script>
-
-	/*
 		let rep;
 		let based=["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"];
 		let bad = [""]; 
 		let good = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\"", "Moi : Désolé, je ne me rappelle pas ni de qui tu es, ni de la soirée d'hier.", "?? : Ah... Je vois...", "Moi : Tu es qui ducoup stp? Tu pourrais me rafraîchir la mémoire sur ce qu'il s'est passé?", "Alix : C'est Alix, c'est moi qui ai organisé la soirée. Après quelques verres on s'est échapé dans ma chambre et je te laisse imaginer la suite...", "Moi : Merci beaucoup, oui j'imagine bien la suite ahah"];
 		let med = [""];
-		
+		let texte="F";
+		/*
 		
 		let branch="base";
 		let step=0;
 		let len=sizeof(dialog["base"]);
-	*/
-		let texte="F";
-		//let ChoixA="Continue";
-		//let ChoixB="";
 
-		
+		*/
 		document.getElementById("texte").innerHTML = texte;
-		//document.getElementById("choixL").innerHTML = ChoixA;
-		//document.getElementById("choixR").innerHTML = ChoixB;
-		
+		document.getElementById("choixL").innerHTML = "bla";
+
+		/*
 		function myFunction(step, branch) {
             document.getElementById("texte").value =   document.getElementById("field1").value;
-        }
+        }*/
 
 	 /*
 	 while(step<$len){
