@@ -7,9 +7,28 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body class="mur">
-        
+        <div class="fin"><span id="texte"></span></div>
 
 
         
     </body>
+
+    <script>
+
+		let queryParams = new URLSearchParams(window.location.search);
+
+		let fin = queryParams.get("fin");
+		if(fin==1) {
+            document.getElementById("texte").innerHTML = "Vous êtes arrivés à la fin 1. Vous avez réalisé de bons choix et avez su prendre vos responsabilités. Sachez que traité, le VIH n’est pas une fatalité et qu’il est enfin temps de déconstruire cette image. Merci à vous d’avoir joué à notre jeu, vous pouvez cliquer <a href=”index.html”>ici</a> afin de recommencer et de tester d’autres choix si vous le souhaitez. Sachez que le VIH n’est pas une fatalité et qu’il est enfin temps de déconstruire cette image. Merci à vous d’avoir joué à notre jeu, vous pouvez cliquer <a href=”index.html”>ici</a> pour recommencer et de tester d’autres choix si vous le souhaitez. Pour plus d’information sur le VIH, rendez-vous <a href=”https://fr.wikipedia.org/wiki/Virus_de_l%27immunod%C3%A9ficience_humaine”>ici</a>. Pour plus d’informations sur la prévention et les traitements, cliquez <a href='https://www.sida-info-service.org/'>là</a>";
+        }
+        if(fin==2) {
+            document.getElementById("texte")
+        }
+        if(fin==3) {
+
+        }
+        if(fin==4) {
+
+        }
+    </script>
 </html>
