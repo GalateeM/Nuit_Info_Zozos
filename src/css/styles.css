@@ -79,7 +79,7 @@
   background-color: #ffffff3a;
 }
 
-body.chapter1 {
+body.chambre {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
   background: url("../assets/img/chambre.png");
@@ -89,7 +89,17 @@ body.chapter1 {
   background-size: cover;
 }
 
-body.index {
+body.medic {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 4.5rem);
+  background: url("../assets/img/medic.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+body.porte {
   background: url("../assets/img/porte_e.png");
   background-position: center;
   background-repeat: no-repeat;
