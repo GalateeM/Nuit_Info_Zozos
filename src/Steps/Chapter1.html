@@ -22,9 +22,8 @@
 		let rep;
 		let based=["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"];
 		let bad = [""]; 
-		let good_etape1 = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\"", "Répondre ?", "Moi : Désolé, je ne me rappelle pas ni de qui tu es, ni de la soirée d'hier.", "?? : Ah... Je vois...", "Moi : Tu es qui du coup stp? Tu pourrais me rafraîchir la mémoire sur ce qu'il s'est passé?", "Alix : C'est Alix, c'est moi qui ai organisé la soirée. Après quelques verres on s'est échapé dans ma chambre et je te laisse imaginer la suite...", "Moi : Merci beaucoup, oui j'imagine bien la suite ahah", "Je vais poser une question..."];
-		let good_etape2 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal"]
-		let good_etape3 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal"]
+		let good_etape1 = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore pour hier soir ;)\"", "Répondre ?", "Moi : Désolé, je ne me rappelle pas ni de qui tu es, ni de la soirée d'hier.", "?? : Ah... Je vois...", "Moi : Tu es qui du coup stp? Tu pourrais me rafraîchir la mémoire sur ce qu'il s'est passé?", "Alix : C'est Alix, c'est moi qui ai organisé la soirée. Après quelques verres on s'est échapé dans ma chambre et je te laisse imaginer la suite...", "Moi : Merci beaucoup, oui j'imagine bien la suite ahah", "Je vais poser une question..."];
+		let good_etape2 = ["Moi : Tu te rappelle si on s'est protégé ?", "Alix : Non, on avait pas de préservatif :/", "Moi : Ok merci de m'avoir répondu", "Alix : Pas de problème, c'est normal", "Je décroche. Est ce que je devrai aller prendre un traitement d'urgence TPE ?"]
 		let med = ["Moi : ça te dit qu'on se revoit à l'ocas' ?", "Alix : J'aurais bien aimé mais je suis rentrée chez mes parents en Belgique", "Moi : Ah ok, pas de problème. J'espère qu'on pourra se revoir"];
 		
 		let texte="F";
@@ -61,7 +60,7 @@
 				}
 			}else if (branche=="good1"){
 				if(choix==false) {
-					if(step<7 && step !=1){
+					if(step<6 && step !=1){
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").style.visibility = 'hidden';
 						document.getElementById("choixR").innerHTML = "Continuer";
@@ -72,7 +71,13 @@
 						document.getElementById("choixL").innerHTML = "Ne pas répondre";
 						document.getElementById("choixR").innerHTML = "répondre";
 						choix=true;
-						
+					
+					}else if(step==6){
+						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").style.visibility = 'visible';
+						document.getElementById("choixL").innerHTML = "Ca te dit qu'on se revoit ?";
+						document.getElementById("choixR").innerHTML = "On s'est protégés ?";
+						choix=true;
 					}else {
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").style.visibility = 'hidden';
@@ -91,30 +96,42 @@
 						choix=false;
 						step=0;
 						document.getElementById("texte").innerHTML = good_etape2[step];
+						document.getElementById("choixL").style.visibility = 'hidden';
+						document.getElementById("choixR").innerHTML = "Continuer";
 					}
 				}
 			}
 			else if (branche=="good2"){
-				if(step<4) {
-					document.getElementById("texte").innerHTML = good_etape2[step];
+				if(choix==false){
+					if(step<4) {
+						document.getElementById("texte").innerHTML = good_etape2[step];
+					}
+					if(step==4) {
+						document.getElementById("choixL").style.visibility = 'visible';
+						document.getElementById("choixL").innerHTML = "Oui";
+						document.getElementById("choixR").innerHTML = "Non";
+						choix=true;
+					}
 				}
-				if(step==3) {
+				else {
+					choix=false;
+					step=0;
+					document.location.href="./Chapitre3.html?choixP=bad1";
 					document.getElementById("choixL").style.visibility = 'hidden';
 					document.getElementById("choixR").innerHTML = "Continuer";
 				}
-
-			}
-			else if (branche=="good3"){
 				
 			}
-			else if (branche=="bad"){
-			
-			}
 			else if (branche=="med"){
-			
+				if(step<3){
+					document.getElementById("texte").innerHTML = med[step];
+				}
+				else {
+					document.location.href="./Chapter1_scene3.html";
+				}
 			}
 			else {
-				 document.getElementById("texte").innerHTML = "Ayo wtf ?";
+				 document.getElementById("texte").innerHTML = "Ayo wtf ?"; 
 			}
         }
 		
@@ -135,9 +152,8 @@
 					document.location.href="./Chapitre3.html?choixP=bad1"; 
 				}
 			}else if (branche=="good1"){
-				debugger
 				if(choix==false) {
-					if(step<7 && step !=1){
+					if(step<6 && step !=1){
 						
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").style.visibility = 'hidden';
@@ -149,7 +165,13 @@
 						document.getElementById("choixL").innerHTML = "Ne pas répondre";
 						document.getElementById("choixR").innerHTML = "répondre";
 						choix=True;
-						
+					}else if(step==6){
+						document.getElementById("texte").innerHTML = good_etape1[step];
+						document.getElementById("choixL").style.visibility = 'visible';
+						document.getElementById("choixL").innerHTML = "Ca te dit qu'on se revoit ?";
+						document.getElementById("choixR").innerHTML = "On s'est protégés ?";
+						choix=true;
+					
 					}else {
 						document.getElementById("texte").innerHTML = good_etape1[step];
 						document.getElementById("choixL").style.visibility = 'hidden';
@@ -163,21 +185,48 @@
 						choix=false;
 						step=0;
 					}
+					
 					else {
 						branche = "med";
 						choix=false;
 						step=0;	
+						document.getElementById("texte").innerHTML = med[step];
+						document.getElementById("choixL").style.visibility = 'hidden';
+						document.getElementById("choixR").innerHTML = "Continuer";
 					}
 				}
 			}
 			else if (branche=="good2"){
-				
+				if(choix==false){
+					if(step<4) {
+						document.getElementById("texte").innerHTML = good_etape2[step];
+					}
+					if(step==4) {
+						document.getElementById("choixL").style.visibility = 'visible';
+						document.getElementById("choixL").innerHTML = "Oui";
+						document.getElementById("choixR").innerHTML = "Non";
+						choix=true;
+					}
+				}
+				else {
+					branche = "med";
+					choix=false;
+					step=5;
+					document.getElementById("texte").innerHTML = med[step];
+				}
 			}
 			else if (branche=="good3"){
-				
+				document.location.href="./Chapitre3.html?choixP=bad1";
 			}
 			else if (branche=="med"){
-			
+				if(step<4){
+					document.getElementById("choixL").style.visibility = 'hidden';
+					document.getElementById("choixR").innerHTML = "Continuer";
+					document.getElementById("texte").innerHTML = med[step];
+				}
+				else {
+					document.location.href="./Chapter1_scene3.html";
+				}
 			}
 			else {
 				 document.getElementById("texte").innerHTML = "Ayo wtf ?";

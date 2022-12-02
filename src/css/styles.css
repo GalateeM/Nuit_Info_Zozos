@@ -126,6 +126,10 @@ div.btn {
   
 }
 
+.light {
+  color: rgb(165, 165, 165);
+}
+
 footer.bottom {
   position: absolute;
   bottom: 0;
