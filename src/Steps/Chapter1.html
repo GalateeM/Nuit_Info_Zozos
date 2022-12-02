@@ -15,21 +15,28 @@
     </body>
 	
 	<script>
-		/*let rep;
+		let rep;
 		let StartPoint;
-		let dialog=["based"=>["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"],
-		"bad"=>[], 
-		"good"=>[],
-		"med"=>[]
-		];
+		let based=["J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...", "Le téléphone vibre"];
+		let bad = []; 
+		let good = ["J'ai reçu un SMS d'un numéro inconnu.\"Merci encore hier soir ;)\""];
+		let med = [];
+		
+		/*
 		let branch="base";
 		let step=0;
 		let len=sizeof(dialog["base"]);*/
-		let texte="J'ai fait une grosse soirée hier... C'est le blackout total, je ne me rappel plus de rien! Qu'est ce que j'ai mal à la tête...";
+		
+		let texte="f";
 		document.getElementById("texte").innerHTML = texte;
 		
+		
+		
+		
+		
+		
 		function myFunction(step, branch) {
-			document.getElementById("field2").value =   document.getElementById("field1").value;
+			document.getElementById("texte").value =   document.getElementById("field1").value;
 		}
 
 	 /*
